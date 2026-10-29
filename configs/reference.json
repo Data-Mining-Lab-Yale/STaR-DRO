@@ -1,0 +1,43 @@
+{
+  "grouping": {
+    "groupby": "code",
+    "granularity": "annotation",
+    "min_count": 1
+  },
+  "star_dro": {
+    "alpha": 1.2,
+    "eta": 0.0006,
+    "rho_start": 0.3,
+    "rho_end": 0.03,
+    "upper": 15.0,
+    "gamma": 0.75,
+    "hardness_scale": "count"
+  },
+  "training": {
+    "objective": "stardro",
+    "epochs": 3,
+    "dro_start_epoch": 2,
+    "batch_size": 3,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.03,
+    "max_grad_norm": 1.0,
+    "gradient_checkpointing": true,
+    "checkpoint_selection": "last"
+  },
+  "lora": {
+    "enabled": true,
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the STaR-DRO manuscript when using this software."
+title: "STaR-DRO: Stateful Tsallis Reweighting for Group-Robust Structured Prediction"
+type: software
+version: 0.5.0
+authors:
+  - family-names: Fodeh
+    given-names: Samah
+  - family-names: Puthiaraju
+    given-names: Ganesh
+  - family-names: Irankhah
+    given-names: Elyas
+  - family-names: Khan
+    given-names: Afshan
+  - family-names: Ramachandran
+    given-names: Sreeraj
+  - family-names: Ma
+    given-names: Linhai
+  - family-names: Talakokkul
+    given-names: Srivani
+  - family-names: Schellhorn
+    given-names: Sarah

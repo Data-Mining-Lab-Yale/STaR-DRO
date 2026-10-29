@@ -1,0 +1,12 @@
+{
+  "python": "3.13.18",
+  "platform": "Linux",
+  "tests": 83,
+  "passed": 83,
+  "skipped": 0,
+  "failures": 0,
+  "errors": 0,
+  "torch_available": true,
+  "datasets_available": true,
+  "successful": true
+}

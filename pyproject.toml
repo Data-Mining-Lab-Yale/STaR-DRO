@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-dro"
+version = "0.5.0"
+description = "STaR-DRO: Stateful Tsallis Reweighting for Group-Robust Structured Prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "STaR-DRO authors"}]
+dependencies = []
+
+[project.optional-dependencies]
+data = ["datasets>=2.19,<6"]
+evaluation = ["rapidfuzz>=3,<4"]
+inference = ["vllm>=0.11.2,<0.12", "transformers>=4.56,<5", "peft>=0.13,<1", "accelerate>=0.34,<2"]
+train = ["torch>=2.2,<3", "transformers>=4.45,<5", "peft>=0.13,<1", "datasets>=2.19,<6", "rapidfuzz>=3,<4"]
+dev = ["build>=1.2", "ruff>=0.6"]
+
+[project.scripts]
+star-dro = "star_dro.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]

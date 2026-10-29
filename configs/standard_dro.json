@@ -1,0 +1,5 @@
+{
+  "training": {"objective": "standard_dro"},
+  "grouping": {"granularity": "annotation"},
+  "standard_dro": {"eta": 0.1}
+}

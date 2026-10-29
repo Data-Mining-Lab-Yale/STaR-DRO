@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STaR-DRO annotated record",
+  "allOf": [
+    {
+      "$ref": "record.schema.json"
+    },
+    {
+      "required": [
+        "annotations"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Validation of STaR-DRO 0.5.0 (ontology-driven scorer, configurable checkpoint selection).
+Python 3.13.18
+Platform Linux
+
+numpy==2.5.4
+rapidfuzz==3.14.6
+torch==2.14.1
+transformers==4.57.6
+peft==0.21.2
+tokenizers==0.22.2
+datasets==5.0.1
+accelerate==1.15.0
+vllm: not installed
+ruff==0.17.3
+build==1.6.1
+
+CPU-only environment (torch CUDA build without a GPU). All 83 tests ran; none skipped.
+The offline model integration test trained a tiny local Llama with LoRA (STaR-DRO, sample attribution,
+SFT, validation_ce selection and Standard DRO), resumed from an epoch checkpoint and merged the adapter.
+vLLM was not installed: the vLLM interface tests use test doubles and do not establish GPU runtime correctness.
+Run the checkpoint-only CUDA smoke test in docs/quickstart.md on the target hardware.
+See docs/validation.json for the suite summary.

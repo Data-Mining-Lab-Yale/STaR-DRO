@@ -1,0 +1,7 @@
+include README.md AGENTS.md LICENSE CITATION.bib CITATION.cff requirements.txt requirements-dev.txt environment.yml
+recursive-include docs *.md *.json *.txt
+recursive-include configs *.json
+recursive-include schemas *.json
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include prompts *.txt *.md
