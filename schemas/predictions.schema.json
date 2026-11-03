@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STaR-DRO prediction record",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prediction": {
+      "type": "string"
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "Code",
+          "Sub-code",
+          "Span"
+        ],
+        "properties": {
+          "Code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "Sub-code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "Span": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "parse_error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "prediction"
+      ]
+    },
+    {
+      "required": [
+        "annotations"
+      ]
+    }
+  ]
+}

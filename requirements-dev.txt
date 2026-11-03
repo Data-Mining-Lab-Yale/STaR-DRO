@@ -1,0 +1,2 @@
+# CPU-friendly development dependencies; CUDA/vLLM testing uses requirements.txt.
+-e .[train,dev]

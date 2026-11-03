@@ -1,0 +1,3 @@
+{
+  "grouping": {"groupby": "code", "granularity": "sample", "min_count": 1}
+}

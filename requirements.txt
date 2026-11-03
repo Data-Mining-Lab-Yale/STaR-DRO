@@ -1,0 +1,11 @@
+# STaR-DRO training and inference. Install CUDA-compatible PyTorch/vLLM builds together.
+# These are supported dependency ranges, not the environment of the paper's runs.
+torch>=2.2,<3
+transformers>=4.56,<5
+peft>=0.13,<1
+datasets>=2.19,<6
+# Optional fuzzy label matching backend for scoring (difflib is used if absent).
+rapidfuzz>=3,<4
+accelerate>=0.34,<2
+# Bounded to the Transformers-4-compatible vLLM API family used by this integration.
+vllm>=0.11.2,<0.12
